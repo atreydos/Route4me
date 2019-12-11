@@ -1,0 +1,2 @@
+rootProject.name='Route4me'
+include ':app', ':MPChartLib'

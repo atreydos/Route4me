@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/exchangeRatesFragment">
+    <fragment
+        android:id="@+id/exchangeRatesFragment"
+        android:name="io.atreydos.route4me.presentation.rates.RatesFragment"
+        android:label="fragment_exchange_rates"
+        tools:layout="@layout/fragment_rates">
+        <action
+            android:id="@+id/action_ratesFragment_to_rateHistoryGraphFragment"
+            app:destination="@id/exchangeRateHistoryGraphFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exchangeRateHistoryGraphFragment"
+        android:name="io.atreydos.route4me.presentation.details.RateHistoryFragment"
+        android:label="fragment_exchange_rate_history_graph"
+        tools:layout="@layout/fragment_rate_history">
+        <argument
+            android:name="currencyCode"
+            app:argType="string" />
+    </fragment>
+</navigation>
